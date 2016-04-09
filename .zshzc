@@ -1,0 +1,32 @@
+alias tmux="TERM=screen-256color-bce tmux"
+alias gobuild="go install"
+
+path(){
+    if [ "$#" -ne 1 ] 
+    then 
+        echo "usage: <file-name>" 
+        return
+    fi
+    find . -name "*$1*"
+
+}
+
+list(){
+    if [ "$#" -ne 1 ] 
+    then 
+        echo "usage: <file-ext>" 
+        return
+    fi
+    find . -name "*.$1"
+}
+
+
+mutate(){
+    if [ "$#" -ne 3 ] 
+    then 
+        echo "usage: <file-ext> <orginal> <to-replace-with>"
+        return
+    fi
+    list $1 | xargs sed -i '' "s/$2/$3/g"
+}
+
