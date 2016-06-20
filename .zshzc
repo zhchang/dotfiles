@@ -1,5 +1,6 @@
 alias tmux="TERM=screen-256color-bce tmux"
 alias gobuild="go install"
+alias gopath="cd $GOPATH"
 
 path(){
     if [ "$#" -ne 1 ] 
