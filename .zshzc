@@ -1,6 +1,7 @@
 alias tmux="TERM=screen-256color-bce tmux"
 alias gobuild="go install"
 alias gopath="cd $GOPATH"
+export PYTHONDONTWRITEBYTECODE=true
 
 path(){
     if [ "$#" -ne 1 ] 

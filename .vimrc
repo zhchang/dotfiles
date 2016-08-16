@@ -32,3 +32,6 @@ nnoremap <silent> gb :GoInstall<cr>
 let g:QF_ASP='~/work/go/src/github.com/myteksi/go'
 
 let g:go_highlight_operators= 1
+
+set autoread
+autocmd BufWritePost *.py silent !autopep8 -i %  
