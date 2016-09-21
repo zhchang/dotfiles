@@ -8,6 +8,7 @@ Plugin 'zhchang/quick_file'
 Plugin 'fatih/vim-go'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'nvie/vim-flake8'
+Plugin 'klen/python-mode' 
 call vundle#end()
 
 syntax on
@@ -35,3 +36,6 @@ let g:go_highlight_operators= 1
 
 set autoread
 autocmd BufWritePost *.py silent !autopep8 -i %  
+let g:pymode_rope_goto_definition_bind = "<C-d>"
+let g:pymode_run_bind = "<C-e>"
+
