@@ -38,4 +38,5 @@ set autoread
 autocmd BufWritePost *.py silent !autopep8 -i %  
 let g:pymode_rope_goto_definition_bind = "<C-d>"
 let g:pymode_run_bind = "<C-e>"
+let g:pymode_lint_ignore = "E501"
 let g:go_def_mode = 'godef'

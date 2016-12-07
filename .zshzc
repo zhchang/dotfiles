@@ -32,3 +32,6 @@ mutate(){
     list $1 | xargs sed -i '' "s/$2/$3/g"
 }
 
+
+alias docker-rm="docker rm $(docker ps -a -q)"
+alias docker-rmi="docker rmi $(docker images | grep "<none>" | awk '{print $3}')"
