@@ -19,7 +19,7 @@ set expandtab
 set shiftwidth=4
 set softtabstop=4
 
-let g:go_fmt_command = "goimports"
+let g:go_fmt_command = "gofmt"
 
 set hlsearch
 set cursorline

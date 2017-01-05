@@ -33,5 +33,10 @@ mutate(){
 }
 
 
+qf(){
+    mvim -v -c ":QF $@"
+}
+
+
 alias docker-rm="docker rm $(docker ps -a -q)"
 alias docker-rmi="docker rmi $(docker images | grep "<none>" | awk '{print $3}')"
