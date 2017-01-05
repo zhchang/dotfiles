@@ -34,9 +34,11 @@ mutate(){
 
 
 qf(){
-    mvim -v -c ":QF $@"
+    arg=":QF $@"
+    mvim -v -c "$arg"
 }
 
 
 alias docker-rm="docker rm $(docker ps -a -q)"
 alias docker-rmi="docker rmi $(docker images | grep "<none>" | awk '{print $3}')"
+alias cesium="python -m cesium_grpc"
