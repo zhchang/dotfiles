@@ -30,7 +30,7 @@ set guifont=Monaco:h12
 nnoremap <silent> gr :GoReferrers<cr>
 nnoremap <silent> gb :GoInstall<cr>
 :command GoB GoInstall
-let g:QF_ASP='~/work/go/src/github.com/myteksi/go'
+let g:QF_ASP=$GO_WORK_ROOT
 
 let g:go_highlight_operators= 1
 
