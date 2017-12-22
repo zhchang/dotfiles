@@ -35,7 +35,7 @@ mutate(){
 
 qf(){
     arg=":QF $@"
-    mvim -v -c "$arg"
+    vim -v -c "$arg"
 }
 
 
