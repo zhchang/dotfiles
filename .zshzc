@@ -2,6 +2,7 @@ alias tmux="TERM=screen-256color-bce tmux"
 alias gobuild="go install"
 alias gopath="cd $GOPATH"
 export PYTHONDONTWRITEBYTECODE=true
+export PATH=$PATH:/Applications/MacVim.app/Contents/bin
 
 path(){
     if [ "$#" -ne 1 ] 
@@ -35,7 +36,7 @@ mutate(){
 
 qf(){
     arg=":QF $@"
-    vim -v -c "$arg"
+    mvim -v -c "$arg"
 }
 
 

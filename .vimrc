@@ -42,3 +42,4 @@ let g:pymode_lint_ignore = "E501"
 let g:go_def_mode = 'godef'
 
 set foldmethod=syntax
+set clipboard=unnamed
