@@ -1,5 +1,7 @@
 set nocompatible
 
+let g:python_host_prog='/Users/zhao.chang/neovim/bin/python'
+
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -35,7 +37,7 @@ let g:QF_ASP=$GO_WORK_ROOT
 let g:go_highlight_operators= 1
 
 set autoread
-autocmd BufWritePost *.py silent !autopep8 -i %  
+" autocmd BufWritePost *.py silent !autopep8 -i %  
 let g:pymode_rope_goto_definition_bind = "<C-d>"
 let g:pymode_run_bind = "<C-e>"
 let g:pymode_lint_ignore = "E501"
@@ -43,3 +45,5 @@ let g:go_def_mode = 'godef'
 
 set foldmethod=syntax
 set clipboard=unnamed
+let g:pymode_rope_complete_on_dot = 0
+
