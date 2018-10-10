@@ -11,6 +11,7 @@ Plugin 'fatih/vim-go'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'nvie/vim-flake8'
 Plugin 'klen/python-mode' 
+Plugin 'tpope/vim-fugitive'
 call vundle#end()
 
 syntax on
@@ -24,7 +25,7 @@ set softtabstop=4
 let g:go_fmt_command = "gofmt"
 
 set hlsearch
-set cursorline
+" set cursorline
 set background=dark
 color solarized 
 set number
