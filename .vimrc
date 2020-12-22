@@ -1,17 +1,16 @@
 set nocompatible
-
-let g:python_host_prog='/Users/zhao.chang/neovim/bin/python'
-
+set visualbell
+set t_vb=
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
-Plugin 'zhchang/quick_file'
-Plugin 'fatih/vim-go'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'nvie/vim-flake8'
-Plugin 'klen/python-mode' 
-Plugin 'tpope/vim-fugitive'
+"Plugin 'gmarik/Vundle.vim'
+"Plugin 'zhchang/quick_file'
+"Plugin 'fatih/vim-go'
+"Plugin 'Valloric/YouCompleteMe'
+"Plugin 'nvie/vim-flake8'
+"Plugin 'klen/python-mode' 
+"Plugin 'tpope/vim-fugitive'
 call vundle#end()
 
 syntax on
@@ -27,8 +26,8 @@ let g:go_fmt_command = "gofmt"
 set hlsearch
 " set cursorline
 set background=dark
-color solarized 
-set number
+"color solarized 
+set relativenumber
 set guifont=Monaco:h12
 nnoremap <silent> gr :GoReferrers<cr>
 nnoremap <silent> gb :GoInstall<cr>
@@ -47,4 +46,7 @@ let g:go_def_mode = 'godef'
 set foldmethod=syntax
 set clipboard=unnamed
 let g:pymode_rope_complete_on_dot = 0
-
+function Clip() range
+  echo system('echo '.shellescape(join(getline(a:firstline, a:lastline), "\n")).'| clip.exe')
+endfunction
+com -range=% -nargs=0 Clip ::<line1>,<line2>call Clip()
